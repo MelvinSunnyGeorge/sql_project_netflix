@@ -1,1 +1,2 @@
-# sql_project_netflix
+# Netflix Movies and TV Shows Analysis using SQL
+[netflix logo]()
