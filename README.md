@@ -37,22 +37,13 @@ CREATE TABLE netflix (
     description VARCHAR(550)
 );
 
-Business Problems and SQL Solutions
+## Business Problems and SQL Solutions
+
 ### 1. Content Type Distribution
+
 ```sql
     SELECT type, COUNT(*) 
     FROM netflix 
     GROUP BY 1;
 
-### 2. Most Common Ratings
-```sql
-    WITH RatingCounts AS (
-        SELECT type, rating, COUNT(*) AS rating_count
-        FROM netflix
-        GROUP BY type, rating
-    )
-    SELECT type, rating AS most_frequent_rating
-    FROM (
-        SELECT *, RANK() OVER (PARTITION BY type ORDER BY rating_count DESC) AS rank
-        FROM RatingCounts
-    ) WHERE rank = 1;
+
