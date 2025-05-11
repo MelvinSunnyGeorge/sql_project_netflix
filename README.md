@@ -36,6 +36,7 @@ CREATE TABLE netflix (
     listed_in VARCHAR(250),
     description VARCHAR(550)
 );
+```
 
 ## Business Problems and SQL Solutions
 
@@ -45,5 +46,7 @@ CREATE TABLE netflix (
     SELECT type, COUNT(*) 
     FROM netflix 
     GROUP BY 1;
+```
+
 
 
