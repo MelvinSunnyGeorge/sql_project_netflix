@@ -38,12 +38,12 @@ CREATE TABLE netflix (
 );
 
 Business Problems and SQL Solutions
-1. Content Type Distribution
+###1. Content Type Distribution
 SELECT type, COUNT(*) 
 FROM netflix 
 GROUP BY 1;
 
-2. Most Common Ratings
+### 2. Most Common Ratings
 WITH RatingCounts AS (
     SELECT type, rating, COUNT(*) AS rating_count
     FROM netflix
